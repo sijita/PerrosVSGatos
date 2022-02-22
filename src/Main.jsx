@@ -3,8 +3,9 @@ import Banner from "./images/banner.jpg";
 import * as tf from "@tensorflow/tfjs";
 import { useState, useEffect } from "react";
 
+
 export default function Main() {
-    const [model, setModel] = useState(null)
+    const [model, setModel] = useState()
 
     const loadModel = async () => {
         try {
@@ -33,6 +34,9 @@ export default function Main() {
       mostrarCamara();
     }
 
+    console.log(model);
+    predecir();
+
     function mostrarCamara() {
       var opciones = {
         audio: false,
@@ -40,7 +44,7 @@ export default function Main() {
           width: tamano, height: tamano
         }
       }
-
+      
       if (navigator.mediaDevices.getUserMedia) {
         navigator.mediaDevices.getUserMedia(opciones)
             .then(function(stream) {
