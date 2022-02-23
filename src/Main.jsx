@@ -9,7 +9,7 @@ export default function Main() {
 
     const loadModel = async () => {
         try {
-            const model = await tf.loadLayersModel(process.env.PUBLIC_URL + "model.json");
+            const model = await tf.loadLayersModel("https://perrosvsgatos.vercel.app/model.json");
             setModel(model);
             console.log("Modelo cargado");
         } catch (error) {
