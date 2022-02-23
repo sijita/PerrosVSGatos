@@ -34,7 +34,6 @@ export default function Main() {
       mostrarCamara();
     }
 
-    console.log(model);
     predecir();
 
     function mostrarCamara() {
