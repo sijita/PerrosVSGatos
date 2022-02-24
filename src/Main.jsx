@@ -241,7 +241,7 @@ export default function Main() {
         <div className="row">
           <div className="col-12 col-md-4 offset-md-4 text-center">
             <video id="video" playsInline autoPlay style={{ width: "1px" }}></video>
-            <button className="btn btn-primary mb-2" id="cambiar-camara">
+            <button className="btn btn-primary mb-2 d-none" id="cambiar-camara">
               Cambiar camara
             </button>
             <canvas
